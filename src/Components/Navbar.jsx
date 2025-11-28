@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import logo1 from "../Assets/Logo1.png";
+import logo1 from "../assets/Logo1.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -17,7 +16,10 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow sticky top-0 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2">
@@ -62,7 +64,11 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-700">
           <div className="flex items-center justify-between">
